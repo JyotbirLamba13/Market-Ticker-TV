@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Market Ticker — TradingView Overlay",
-  "version": "1.0.0",
-  "description": "Floating, draggable market ticker overlay powered by TradingView widgets. Live indices, watchlist, and sparklines on every page.",
+  "name": "Market Ticker",
+  "version": "1.1.0",
+  "description": "Floating draggable market ticker with live NSE/BSE prices. Rates refresh every 30 seconds.",
   "action": {
     "default_popup": "popup.html",
     "default_title": "Market Ticker",
@@ -29,9 +29,13 @@
     "storage",
     "scripting"
   ],
+  "host_permissions": [
+    "https://query1.finance.yahoo.com/*",
+    "https://query2.finance.yahoo.com/*"
+  ],
   "web_accessible_resources": [
     {
-      "resources": ["widget-frame.html", "icons/*"],
+      "resources": ["icons/*"],
       "matches": ["<all_urls>"]
     }
   ]
