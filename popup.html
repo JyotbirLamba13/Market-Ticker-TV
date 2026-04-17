@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Market Ticker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<div id="popup">
+
+  <!-- Header -->
+  <div class="p-header">
+    <div class="p-logo">
+      <svg width="14" height="14" viewBox="0 0 20 20" fill="none">
+        <rect x="1.5" y="1.5" width="17" height="17" rx="2.5" stroke="currentColor" stroke-width="1.4"/>
+        <polyline points="3,14.5 6.5,9.5 9.5,12.5 13.5,7 17,10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      MARKET TICKER
+    </div>
+    <button id="btn-visibility">Hide Widget</button>
+  </div>
+
+  <!-- Theme -->
+  <div class="p-section">
+    <div class="p-label">THEME</div>
+    <div class="p-row-2">
+      <button class="theme-btn" data-theme="dark">◑ Dark</button>
+      <button class="theme-btn" data-theme="light">○ Light</button>
+    </div>
+  </div>
+
+  <!-- Panels -->
+  <div class="p-section">
+    <div class="p-label">PANELS</div>
+    <label class="p-toggle-row">
+      <span>Indices / Pinned</span>
+      <div class="toggle"><input type="checkbox" id="tog-indices"><span class="ttrack"></span></div>
+    </label>
+    <label class="p-toggle-row">
+      <span>Watchlist</span>
+      <div class="toggle"><input type="checkbox" id="tog-watchlist"><span class="ttrack"></span></div>
+    </label>
+    <label class="p-toggle-row">
+      <span>Sparkline on tap</span>
+      <div class="toggle"><input type="checkbox" id="tog-sparkline"><span class="ttrack"></span></div>
+    </label>
+  </div>
+
+  <!-- Active watchlist -->
+  <div class="p-section">
+    <div class="p-label">
+      ACTIVE WATCHLIST
+      <span class="p-hint" id="watchlist-count"></span>
+    </div>
+    <div id="active-list" class="active-list"></div>
+  </div>
+
+  <!-- Symbol browser -->
+  <div class="p-section p-section-last">
+    <div class="p-label">ADD SYMBOLS</div>
+    <input id="sym-search" type="text" placeholder="Filter symbols…" autocomplete="off" spellcheck="false">
+    <!-- Sector tabs -->
+    <div id="sector-tabs" class="sector-tabs"></div>
+    <!-- Symbol grid -->
+    <div id="sym-grid" class="sym-grid"></div>
+  </div>
+
+</div>
+<script src="popup.js"></script>
+</body>
+</html>
